@@ -1,0 +1,122 @@
+﻿<Window x:Class="AppMain.ProductScreen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AppMain"
+        mc:Ignorable="d"
+        Title="ProductScreen"
+        WindowStyle="SingleBorderWindow"
+        Background="Transparent"
+        Height="1920" Width="1080">
+    <Window.Resources>
+        <Style x:Key="ButtonStyle" TargetType="Border">
+            <Setter Property="Width" Value="300"/>
+            <Setter Property="Height" Value="130"/>
+            <Setter Property="Background" Value="#28388b"/>
+        </Style>
+    </Window.Resources>
+
+    <Border CornerRadius="30" Background="#fff">
+        <Grid ShowGridLines="True">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="5*"/>
+                <RowDefinition Height="0.5*"/>
+                <RowDefinition Height="1.5*"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Border CornerRadius="30 30 0 0" Background="#d2daff" Grid.Column="0" Grid.Row="0">
+                <StackPanel Orientation="Horizontal" Background="Transparent">
+                    <Image Source="/Image/App/branch.png" Height="130" Margin="60 0 0 0"/>
+                    <TextBlock x:Name="tbDate" 
+                               VerticalAlignment="Center" 
+                               Margin="320 0 0 0"
+                               FontWeight="Bold"
+                               FontSize="25"
+                               TextAlignment="Right"
+                               >
+                Monday <LineBreak/>15-01-2021
+                    </TextBlock>
+                    <Line    X1="0" Y1="0"
+                            X2="0" Y2="50"
+                            Stroke="Black"
+                            StrokeThickness="2" 
+                            VerticalAlignment="Center"
+                            Margin="10 0 0 0"/>
+                    <TextBlock x:Name="tbTime" Text="15:24" 
+                               VerticalAlignment="Center"
+                               FontSize="50"
+                               FontWeight="Bold"
+                               Margin="10 0 0 0"
+                               />
+                </StackPanel>
+            </Border>
+
+
+            <StackPanel Grid.Row="1" Orientation="Horizontal">
+                <StackPanel>
+                    
+                </StackPanel>
+                <StackPanel></StackPanel>
+            </StackPanel>
+
+
+            <StackPanel Orientation="Horizontal" Grid.Row="2" Background="#020240">
+                <TextBlock Foreground="#fff" FontSize="50" FontWeight="Bold" VerticalAlignment="Center" Margin="50 0 0 0">YOUR CART</TextBlock>
+                <TextBlock Foreground="#fff" FontSize="50" FontWeight="Bold" VerticalAlignment="Center" Margin="370 0 0 0">TOTAL: $23.45</TextBlock>
+            </StackPanel>
+            <StackPanel Grid.Row="3" Background="#7e95ff">
+
+            </StackPanel>
+            <Border  CornerRadius="0 0 30 30" Background="#7d95ff"  Grid.Row="4">
+                <StackPanel Background="Transparent" HorizontalAlignment="Left" Orientation="Horizontal">
+                    <Border Name="btnCancel" Style="{StaticResource ButtonStyle}" CornerRadius="0 50 50 0">
+                        <StackPanel VerticalAlignment="Center">
+                            <TextBlock TextAlignment="Center" FontWeight="Bold" Text="CANCEL" Foreground="#fff" FontSize="50"></TextBlock>
+                        </StackPanel>
+                        <Border.BorderBrush>
+                            <DrawingBrush Viewport="10,10,25,25" ViewportUnits="Absolute" TileMode="Tile" >
+                                <DrawingBrush.Drawing>
+                                    <DrawingGroup>
+                                        <GeometryDrawing Brush="Black">
+                                            <GeometryDrawing.Geometry>
+                                                <GeometryGroup>
+                                                    <RectangleGeometry Rect="50,0,50,50" />
+                                                    <RectangleGeometry Rect="50,50,50,50" />
+                                                </GeometryGroup>
+                                            </GeometryDrawing.Geometry>
+                                        </GeometryDrawing>
+                                    </DrawingGroup>
+                                </DrawingBrush.Drawing>
+                            </DrawingBrush>
+                        </Border.BorderBrush>
+                    </Border>
+                    <Border Name="btnDone" Style="{StaticResource ButtonStyle}" Margin="480 0 0 0" CornerRadius="50 0 0 50">
+                        <StackPanel VerticalAlignment="Center">
+                            <TextBlock TextAlignment="Center" FontWeight="Bold" Text="DONE" Foreground="#fff" FontSize="50"></TextBlock>
+                        </StackPanel>
+                        <Border.BorderBrush>
+                            <DrawingBrush Viewport="10,10,25,25" ViewportUnits="Absolute" TileMode="Tile" >
+                                <DrawingBrush.Drawing>
+                                    <DrawingGroup>
+                                        <GeometryDrawing Brush="Black">
+                                            <GeometryDrawing.Geometry>
+                                                <GeometryGroup>
+                                                    <RectangleGeometry Rect="50,0,50,50" />
+                                                    <RectangleGeometry Rect="50,50,50,50" />
+                                                </GeometryGroup>
+                                            </GeometryDrawing.Geometry>
+                                        </GeometryDrawing>
+                                    </DrawingGroup>
+                                </DrawingBrush.Drawing>
+                            </DrawingBrush>
+                        </Border.BorderBrush>
+                    </Border>
+                </StackPanel>
+            </Border>
+
+        </Grid>
+
+    </Border>
+</Window>

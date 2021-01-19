@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+	  <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>s
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove=".gitignore" />
+    <None Remove="image\App\branch.png" />
+    <None Remove="image\App\coca.jpg" />
+    <None Remove="image\App\touch.png" />
+    <None Remove="image\product\bottle.png" />
+    <None Remove="README.md" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AppEntiry\AppEntiry.csproj" />
+    <ProjectReference Include="..\Connection\AppConnection.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="image\App\branch.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="image\App\coca.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="image\App\touch.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="image\product\bottle.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+</Project>
