@@ -1,0 +1,189 @@
+{
+  "format": 1,
+  "restore": {
+    "E:\\dinhnt\\projects\\AtelierBoxVendingMachineApp\\AtelierBox_MApp\\AtelierApp.csproj": {}
+  },
+  "projects": {
+    "E:\\dinhnt\\projects\\AtelierBoxVendingMachineApp\\AppEntiry\\AppEntiry.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\dinhnt\\projects\\AtelierBoxVendingMachineApp\\AppEntiry\\AppEntiry.csproj",
+        "projectName": "AppEntiry",
+        "projectPath": "E:\\dinhnt\\projects\\AtelierBoxVendingMachineApp\\AppEntiry\\AppEntiry.csproj",
+        "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
+        "outputPath": "E:\\dinhnt\\projects\\AtelierBoxVendingMachineApp\\AppEntiry\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.7, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\dinhnt\\projects\\AtelierBoxVendingMachineApp\\AtelierBox_MApp\\AtelierApp.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\dinhnt\\projects\\AtelierBoxVendingMachineApp\\AtelierBox_MApp\\AtelierApp.csproj",
+        "projectName": "AtelierApp",
+        "projectPath": "E:\\dinhnt\\projects\\AtelierBoxVendingMachineApp\\AtelierBox_MApp\\AtelierApp.csproj",
+        "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
+        "outputPath": "E:\\dinhnt\\projects\\AtelierBoxVendingMachineApp\\AtelierBox_MApp\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net40"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net40": {
+            "targetAlias": "net4.0",
+            "projectReferences": {
+              "E:\\dinhnt\\projects\\AtelierBoxVendingMachineApp\\AppEntiry\\AppEntiry.csproj": {
+                "projectPath": "E:\\dinhnt\\projects\\AtelierBoxVendingMachineApp\\AppEntiry\\AppEntiry.csproj"
+              },
+              "E:\\dinhnt\\projects\\AtelierBoxVendingMachineApp\\Connection\\AppConnection.csproj": {
+                "projectPath": "E:\\dinhnt\\projects\\AtelierBoxVendingMachineApp\\Connection\\AppConnection.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net40": {
+          "targetAlias": "net4.0",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "win7-x86": {
+          "#import": []
+        }
+      }
+    },
+    "E:\\dinhnt\\projects\\AtelierBoxVendingMachineApp\\Connection\\AppConnection.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\dinhnt\\projects\\AtelierBoxVendingMachineApp\\Connection\\AppConnection.csproj",
+        "projectName": "AppConnection",
+        "projectPath": "E:\\dinhnt\\projects\\AtelierBoxVendingMachineApp\\Connection\\AppConnection.csproj",
+        "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
+        "outputPath": "E:\\dinhnt\\projects\\AtelierBoxVendingMachineApp\\Connection\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
+            "projectReferences": {
+              "E:\\dinhnt\\projects\\AtelierBoxVendingMachineApp\\AppEntiry\\AppEntiry.csproj": {
+                "projectPath": "E:\\dinhnt\\projects\\AtelierBoxVendingMachineApp\\AppEntiry\\AppEntiry.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
+          "dependencies": {
+            "Microsoft.Data.Sqlite.Core": {
+              "target": "Package",
+              "version": "[3.1.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[3.1.7, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
