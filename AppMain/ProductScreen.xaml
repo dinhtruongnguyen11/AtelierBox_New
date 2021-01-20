@@ -54,12 +54,76 @@
             </Border>
 
 
-            <StackPanel Grid.Row="1" Orientation="Horizontal">
-                <StackPanel>
-                    
+            <StackPanel Grid.Row="1" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <ScrollViewer VerticalScrollBarVisibility="Visible"
+                               HorizontalScrollBarVisibility="Visible"
+                              Width="300">
+                        <!--List categories-->
+                        <ItemsControl ItemsSource="{Binding BlockCategoryUIs}" VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <StackPanel Tag="{Binding}">
+                                        <Border Margin="20" BorderThickness="5" BorderBrush="#cbd6ed" CornerRadius="10" Width="{Binding Width}" Height="{Binding Height}">
+                                            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                                                <Image Source="/Image/product/bottle.png"  Height="180"/>
+                                                <TextBlock Width="120" TextAlignment="Center" Text="{Binding Name}" FontSize="15" FontWeight="Bold" TextWrapping="Wrap"></TextBlock>
+                                            </StackPanel>
+                                        </Border>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                            <ItemsControl.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <StackPanel></StackPanel>
+                                </ItemsPanelTemplate>
+                            </ItemsControl.ItemsPanel>
+                        </ItemsControl>
+                        <!--End list categories-->
+                    </ScrollViewer>
+                    <ScrollViewer VerticalScrollBarVisibility="Visible"
+                               HorizontalScrollBarVisibility="Visible"
+                              Width="700"
+                              Height="1200">
+                        <!--List products-->
+                        <ItemsControl ItemsSource="{Binding BlockProductUIs}" VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                <!--<TextBlock Text="A"/>-->
+                                <StackPanel Orientation="Horizontal">
+                                        <ItemsControl ItemsSource="{Binding ProductUIs}">
+                                            <ItemsControl.ItemTemplate>
+                                                <DataTemplate>
+                                                <StackPanel Tag="{Binding}">
+                                                        <Border Margin="20" BorderThickness="5" BorderBrush="#cbd6ed" CornerRadius="10" Width="200" Height="300">
+                                                            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                                                                <Image Source="/Image/product/bottle.png" Height="180"/>
+                                                                <TextBlock Width="120" TextAlignment="Center" Text="{Binding Name}" FontSize="15" FontWeight="Bold" TextWrapping="Wrap"></TextBlock>
+                                                                <Border BorderThickness="2" BorderBrush="#cbd8f3" Width="80" Margin="0 10 0 0">
+                                                                    <TextBlock TextAlignment="Center" Text="99.99" FontSize="18" FontWeight="Bold"></TextBlock>
+                                                                </Border>
+                                                            </StackPanel>
+                                                        </Border>
+                                                    </StackPanel>
+                                                </DataTemplate>
+                                            </ItemsControl.ItemTemplate>
+                                            <ItemsControl.ItemsPanel>
+                                                <ItemsPanelTemplate>
+                                                    <StackPanel Orientation="Vertical"></StackPanel>
+                                                </ItemsPanelTemplate>
+                                            </ItemsControl.ItemsPanel>
+                                        </ItemsControl>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                            <ItemsControl.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <StackPanel Orientation="Horizontal"></StackPanel>
+                                </ItemsPanelTemplate>
+                            </ItemsControl.ItemsPanel>
+                        </ItemsControl>
+                        <!--End list products-->
+                    </ScrollViewer>
                 </StackPanel>
-                <StackPanel></StackPanel>
-            </StackPanel>
 
 
             <StackPanel Orientation="Horizontal" Grid.Row="2" Background="#020240">
