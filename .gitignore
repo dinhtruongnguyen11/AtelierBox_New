@@ -16,3 +16,5 @@ AppMain/bin/
 AppMain/obj/
 
 AppEntity/bin/
+
+*.config

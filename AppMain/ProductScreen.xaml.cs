@@ -80,4 +80,9 @@ namespace AppMain
         }
 
     }
+
+
+    //Onlcick -> DetailWindow -> Product
+
+
 }
