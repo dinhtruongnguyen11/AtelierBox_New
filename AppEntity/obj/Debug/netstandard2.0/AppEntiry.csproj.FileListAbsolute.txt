@@ -1,8 +1,0 @@
-E:\dinhnt\projects\AtelierBoxVendingMachineApp\AppEntiry\bin\Debug\netstandard2.0\AppEntiry.deps.json
-E:\dinhnt\projects\AtelierBoxVendingMachineApp\AppEntiry\bin\Debug\netstandard2.0\AppEntiry.dll
-E:\dinhnt\projects\AtelierBoxVendingMachineApp\AppEntiry\bin\Debug\netstandard2.0\AppEntiry.pdb
-E:\dinhnt\projects\AtelierBoxVendingMachineApp\AppEntiry\obj\Debug\netstandard2.0\AppEntiry.AssemblyInfoInputs.cache
-E:\dinhnt\projects\AtelierBoxVendingMachineApp\AppEntiry\obj\Debug\netstandard2.0\AppEntiry.AssemblyInfo.cs
-E:\dinhnt\projects\AtelierBoxVendingMachineApp\AppEntiry\obj\Debug\netstandard2.0\AppEntiry.csproj.CoreCompileInputs.cache
-E:\dinhnt\projects\AtelierBoxVendingMachineApp\AppEntiry\obj\Debug\netstandard2.0\AppEntiry.dll
-E:\dinhnt\projects\AtelierBoxVendingMachineApp\AppEntiry\obj\Debug\netstandard2.0\AppEntiry.pdb
