@@ -1,2 +1,6 @@
 
 .vs/AtelierBoxVendingMachineApp/DesignTimeBuild/.dtbcache.v2
+
+AppConnection/obj/
+
+AppEntity/obj/

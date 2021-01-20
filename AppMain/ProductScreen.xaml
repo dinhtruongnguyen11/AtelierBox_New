@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:AppMain"
         mc:Ignorable="d"
         Title="ProductScreen"
-        WindowStyle="SingleBorderWindow"
+        WindowStyle="None"
         Background="Transparent"
         Height="1920" Width="1080">
     <Window.Resources>
