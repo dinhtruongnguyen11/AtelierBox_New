@@ -24,6 +24,8 @@ namespace AppMain
         DbAppContext dbAppContext;
         public List<Categories> BlockCategoryUIs { get; set; }
         public List<BlockUI> BlockProductUIs { get; set; }
+        public List<CartProduct> BlockCartProducts { get; set; }
+
 
 
         public ProductScreen()
@@ -33,10 +35,10 @@ namespace AppMain
             List<Categories> categories = new List<Categories> { new Categories { Name="HYGIENE",Width=170,Height=250}
                                                                , new Categories { Name = "DRINKS AND SNACKS" ,Width=220,Height=300}
                                                                , new Categories { Name = "HEALTHY FOOD",Width=170,Height=250 } };
-            dbAppContext.Categories.AddRange(categories);
-            dbAppContext.SaveChanges();
-            var a = dbAppContext.Categories.ToList();
-            BlockCategoryUIs = a;
+            //dbAppContext.Categories.AddRange(categories);
+            //dbAppContext.SaveChanges();
+            //var a = dbAppContext.Categories.ToList();
+            BlockCategoryUIs = categories;
 
 
             List<Product> listProduct = new List<Product> {
@@ -58,6 +60,19 @@ namespace AppMain
             BlockProductUIs = (from lp in listProduct
                         group lp by i++ % 3 into ll
                         select new BlockUI { block_id = ll.Key, ProductUIs = ll.ToList() }).ToList();
+
+            
+
+            List<CartProduct> listCart = new List<CartProduct> {
+                new CartProduct { Name = "BOTTLED DRINK WATER1" },
+                new CartProduct { Name = "BOTTLED DRINK WATER2" },
+                new CartProduct { Name = "BOTTLED DRINK WATER3" },
+                new CartProduct { Name = "BOTTLED DRINK WATER4" },
+                new CartProduct { Name = "BOTTLED DRINK WATER5" },
+                new CartProduct { Name = "BOTTLED DRINK WATER6" }
+            };
+
+            BlockCartProducts = listCart;
 
 
             this.DataContext = this;
