@@ -24,7 +24,9 @@ namespace AppMain
         DbAppContext dbAppContext;
         public List<Categories> BlockCategoryUIs { get; set; }
         public List<BlockUI> BlockProductUIs { get; set; }
-        public List<CartProduct> BlockCartProducts { get; set; }
+        //public List<CartProduct> BlockCartProducts { get; set; }
+
+        public Cart cart { get; set; }
 
 
 
@@ -63,26 +65,43 @@ namespace AppMain
 
             
 
-            List<CartProduct> listCart = new List<CartProduct> {
-                new CartProduct { Name = "BOTTLED DRINK WATER1" },
-                new CartProduct { Name = "BOTTLED DRINK WATER2" },
-                new CartProduct { Name = "BOTTLED DRINK WATER3" },
-                new CartProduct { Name = "BOTTLED DRINK WATER4" },
-                new CartProduct { Name = "BOTTLED DRINK WATER5" },
-                new CartProduct { Name = "BOTTLED DRINK WATER6" }
-            };
+            //List<CartProduct> listCart = new List<CartProduct> {
+            //    new CartProduct { Name = "BOTTLED DRINK WATER1" },
+            //    new CartProduct { Name = "BOTTLED DRINK WATER2" },
+            //    new CartProduct { Name = "BOTTLED DRINK WATER3" },
+            //    new CartProduct { Name = "BOTTLED DRINK WATER4" },
+            //    new CartProduct { Name = "BOTTLED DRINK WATER5" },
+            //    new CartProduct { Name = "BOTTLED DRINK WATER6" }
+            //};
 
-            BlockCartProducts = listCart;
+            //BlockCartProducts = listCart;
 
 
             this.DataContext = this;
 
         }
 
+        private void spAProduct_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            StackPanel stackPanel = sender as StackPanel;
+            Product product = stackPanel.Tag as Product;
+            CartProduct cartProduct = new CartProduct();
+            DetailWindow detailWindow = new DetailWindow(product, ref cartProduct);
+            detailWindow.ShowDialog();
+             
+            if(cartProduct.Quantity <1)
+            {
+                return;
+            }
+
+            cart.ListCardProduct.Add(cartProduct);
+
+
+            this.DataContext = this;
+        }
     }
 
 
-    //Onlcick -> DetailWindow -> Product
 
 
 }
