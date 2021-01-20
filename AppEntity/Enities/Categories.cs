@@ -15,4 +15,8 @@ public class Categories
     public string UserCreate { get; set; }
     public string Active { get; set; }
     public string ImgSrc { get; set; }
+    public bool IsSelected { get; set; }
+    public int Width { get; set; }
+    public int Height { get; set; }
+
 }

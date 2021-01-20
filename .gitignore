@@ -4,3 +4,14 @@
 AppConnection/obj/
 
 AppEntity/obj/
+.vs/
+
+AppConnection/bin/
+
+*.user
+
+AppMain/bin/
+
+AppMain/obj/
+
+AppEntity/bin/
