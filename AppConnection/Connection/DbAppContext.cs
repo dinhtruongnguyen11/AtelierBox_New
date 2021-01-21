@@ -24,7 +24,7 @@ namespace AppConnection.Connection
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            //modelBuilder.Entity<Product>().Ignore();
+            modelBuilder.Entity<Categories>().Ignore(x=>x.IsSelected).Ignore(x => x.Height).Ignore(x => x.Width);
         }
     }
 }
