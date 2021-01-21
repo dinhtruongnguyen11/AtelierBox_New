@@ -15,6 +15,7 @@ namespace AppMain
         public static Product p;
         public static CartProduct cartProduct;
         public DispatcherTimer timer;
+        
         public DetailWindow()
         {
             InitializeComponent();
@@ -48,7 +49,6 @@ namespace AppMain
 
             gridDetail.DataContext = p;
         }
-
         private void Timer_Tick(object sender, EventArgs e)
         {
             var now = DateTime.Now;
@@ -64,6 +64,7 @@ namespace AppMain
             p = _product;
             cartProduct = _cart;
             gridDetail.DataContext = p;
+
         }
 
         private void btnPlus_Click(object sender, RoutedEventArgs e)
@@ -93,6 +94,7 @@ namespace AppMain
 
         private void btnCancel_Click(object sender, RoutedEventArgs e)
         {
+            p1.Price = 100;
             this.Close();
         }
 

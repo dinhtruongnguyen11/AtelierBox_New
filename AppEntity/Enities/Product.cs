@@ -15,7 +15,7 @@ public class Product
     public string UserCreate { get; set; }
     public string Active { get; set; }
     public int Instock { get; set; }
-    public float Price { get; set; }
+    public double Price { get; set; }
     public string ImgSrc { get; set; }
 
 }
