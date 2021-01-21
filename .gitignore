@@ -28,4 +28,10 @@ AppConnection/bin/
 *.user
 
 
+<<<<<<< HEAD
 >>>>>>> tuancx
+=======
+
+AppEntity/bin/
+*.cache
+>>>>>>> dinhnt

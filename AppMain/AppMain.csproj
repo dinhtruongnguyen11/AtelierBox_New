@@ -180,6 +180,7 @@
   <ItemGroup>
     <Compile Include="AppCode\DBHelper.cs" />
     <Compile Include="AppCode\WPFHelper.cs" />
+    <Compile Include="Converter.cs" />
     <Compile Include="DetailWindow.xaml.cs">
       <DependentUpon>DetailWindow.xaml</DependentUpon>
     </Compile>
