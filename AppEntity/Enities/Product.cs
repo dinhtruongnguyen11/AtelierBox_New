@@ -10,7 +10,7 @@ public class Product
     public int ID { get; set; }
     public int CatCode { get; set; }
     public string Name { get; set; }
-    public string Decription { get; set; }
+    public string Description { get; set; }
     public DateTime DateCreate { get; set; }
     public string UserCreate { get; set; }
     public string Active { get; set; }
