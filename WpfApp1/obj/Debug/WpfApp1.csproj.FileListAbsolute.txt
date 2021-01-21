@@ -12,3 +12,4 @@ E:\dinhnt\projects\Spz\AtelierBox_New\WpfApp1\obj\Debug\WpfApp1.csproj.GenerateR
 E:\dinhnt\projects\Spz\AtelierBox_New\WpfApp1\obj\Debug\WpfApp1.csproj.CoreCompileInputs.cache
 E:\dinhnt\projects\Spz\AtelierBox_New\WpfApp1\obj\Debug\WpfApp1.exe
 E:\dinhnt\projects\Spz\AtelierBox_New\WpfApp1\obj\Debug\WpfApp1.pdb
+E:\dinhnt\projects\Spz\AtelierBox_New\WpfApp1\obj\Debug\WpfApp1.csprojAssemblyReference.cache
