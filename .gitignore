@@ -43,4 +43,10 @@ AppConnection/bin/
 *.user
 
 
+<<<<<<< HEAD
 >>>>>>> main
+=======
+
+AppEntity/bin/
+*.cache
+>>>>>>> dinhnt
