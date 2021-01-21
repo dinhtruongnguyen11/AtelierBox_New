@@ -94,7 +94,6 @@ namespace AppMain
 
         private void btnCancel_Click(object sender, RoutedEventArgs e)
         {
-            p1.Price = 100;
             this.Close();
         }
 
