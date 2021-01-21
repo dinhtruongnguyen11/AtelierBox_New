@@ -6,14 +6,48 @@
         xmlns:local="clr-namespace:AppMain"
         mc:Ignorable="d"
         Title="ProductScreen"
-        WindowStyle="SingleBorderWindow"
+        WindowStyle="None"
         Background="Transparent"
+        WindowState="Maximized"
         Height="1920" Width="1080">
     <Window.Resources>
         <Style x:Key="ButtonStyle" TargetType="Border">
             <Setter Property="Width" Value="300"/>
             <Setter Property="Height" Value="130"/>
             <Setter Property="Background" Value="#28388b"/>
+        </Style>
+
+        <Style x:Key="ListCateStyle" TargetType="{x:Type ListView}">
+            <Setter Property="ItemTemplate">
+                <Setter.Value>
+                    <DataTemplate>
+                        <StackPanel Tag="{Binding}">
+                            <Border Margin="20" BorderThickness="5" BorderBrush="#cbd6ed" CornerRadius="10" Width="150" Height="230" Name="MainGrid" Background="#fff">
+                                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                                    <Image Source="/Image/product/bottle.png"  Height="180"/>
+                                    <TextBlock Width="120" TextAlignment="Center" Text="{Binding Name}" FontSize="15" FontWeight="Bold" TextWrapping="Wrap"></TextBlock>
+                                </StackPanel>
+                            </Border>
+                        </StackPanel>
+                        <DataTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="LayoutTransform" TargetName="MainGrid">
+                                    <Setter.Value>
+                                        <ScaleTransform ScaleX="1.2" ScaleY="1.2" />
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+                        </DataTemplate.Triggers>
+                    </DataTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Style.Resources>
+                <!-- Background of selected item when focussed -->
+                <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" Color="Red" />
+                <!-- Background of selected item when not focussed -->
+                <SolidColorBrush x:Key="{x:Static SystemColors.ControlBrushKey}" Color="Green" />
+            </Style.Resources>
         </Style>
     </Window.Resources>
 
@@ -54,11 +88,62 @@
             </Border>
 
 
-            <StackPanel Grid.Row="1" Orientation="Horizontal">
-                <StackPanel>
-                    
-                </StackPanel>
-                <StackPanel></StackPanel>
+            <StackPanel Grid.Row="1" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <!--<ScrollViewer VerticalScrollBarVisibility="Hidden"
+                               HorizontalScrollBarVisibility="Hidden"
+                              Width="300">-->
+                <!--List categories-->
+                <ListView ItemsSource="{Binding BlockCategoryUIs}" VerticalAlignment="Center" HorizontalAlignment="Center" Style="{StaticResource ListCateStyle}">
+                    <ListView.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <StackPanel></StackPanel>
+                        </ItemsPanelTemplate>
+                    </ListView.ItemsPanel>
+                </ListView>
+                <!--End list categories-->
+                <!--</ScrollViewer>-->
+                <ScrollViewer VerticalScrollBarVisibility="Hidden"
+                               HorizontalScrollBarVisibility="Hidden"
+                              Width="700"
+                                  Height="1000">
+                    <!--List products-->
+                    <ItemsControl ItemsSource="{Binding BlockProductUIs}" VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <ItemsControl ItemsSource="{Binding ProductUIs}">
+                                        <ItemsControl.ItemTemplate>
+                                            <DataTemplate>
+                                                <StackPanel Tag="{Binding}" Name="spAProduct" PreviewMouseDown="spAProduct_PreviewMouseDown">
+                                                    <Border Margin="20"  Width="200" Height="300">
+                                                        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                                                            <Image Source="/Image/product/bottle.png" Height="180"/>
+                                                            <TextBlock Width="120" TextAlignment="Center" Text="{Binding Name}" FontSize="15" FontWeight="Bold" TextWrapping="Wrap"></TextBlock>
+                                                            <Border BorderThickness="2" BorderBrush="#cbd8f3" Width="80" Margin="0 10 0 0" Padding="2">
+                                                                <TextBlock TextAlignment="Center" Text="$99.99" FontSize="18" FontWeight="Bold"></TextBlock>
+                                                            </Border>
+                                                        </StackPanel>
+                                                    </Border>
+                                                </StackPanel>
+                                            </DataTemplate>
+                                        </ItemsControl.ItemTemplate>
+                                        <ItemsControl.ItemsPanel>
+                                            <ItemsPanelTemplate>
+                                                <StackPanel Orientation="Vertical"></StackPanel>
+                                            </ItemsPanelTemplate>
+                                        </ItemsControl.ItemsPanel>
+                                    </ItemsControl>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <StackPanel Orientation="Horizontal"></StackPanel>
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                    </ItemsControl>
+                    <!--End list products-->
+                </ScrollViewer>
             </StackPanel>
 
 
@@ -67,11 +152,60 @@
                 <TextBlock Foreground="#fff" FontSize="50" FontWeight="Bold" VerticalAlignment="Center" Margin="370 0 0 0">TOTAL: $23.45</TextBlock>
             </StackPanel>
             <StackPanel Grid.Row="3" Background="#7e95ff">
-
+                <ItemsControl ItemsSource="{Binding ListCardProduct}" VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Tag="{Binding}">
+                                <Border Background="#fff" Margin="20"  Width="300" Height="90" CornerRadius="2" BorderThickness="2" BorderBrush="#cbd8f3">
+                                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Left" Orientation="Horizontal">
+                                        <Image Source="/Image/product/bottle.png" Height="50"/>
+                                        <StackPanel>
+                                            <TextBlock Width="120" TextAlignment="Center" Text="{Binding Name}" FontSize="15" FontWeight="Bold" TextWrapping="Wrap"></TextBlock>
+                                            <StackPanel Orientation="Horizontal">
+                                                <Border BorderThickness="2" BorderBrush="#cbd8f3" Width="80" Margin="0 10 0 0" Padding="2">
+                                                    <TextBlock TextAlignment="Center" Text="QTY: 01" FontSize="18"></TextBlock>
+                                                </Border>
+                                                <Border Background="#cbd8f3" Width="80" Margin="0 10 0 0" Padding="2">
+                                                    <TextBlock TextAlignment="Center" Text="QTY: 01" FontSize="18"></TextBlock>
+                                                </Border>
+                                            </StackPanel>
+                                        </StackPanel>
+                                        <Border Width="50" Height="50" Margin="0 0 0 0" BorderThickness="2">
+                                            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                                                <TextBlock TextAlignment="Center" FontWeight="Bold" Text="X" Foreground="#28388b" FontSize="50"></TextBlock>
+                                            </StackPanel>
+                                            <Border.BorderBrush>
+                                                <DrawingBrush Viewport="10,10,25,25" ViewportUnits="Absolute" TileMode="Tile" >
+                                                    <DrawingBrush.Drawing>
+                                                        <DrawingGroup>
+                                                            <GeometryDrawing Brush="#28388b">
+                                                                <GeometryDrawing.Geometry>
+                                                                    <GeometryGroup>
+                                                                        <RectangleGeometry Rect="50,0,50,50" />
+                                                                        <RectangleGeometry Rect="50,50,50,50" />
+                                                                    </GeometryGroup>
+                                                                </GeometryDrawing.Geometry>
+                                                            </GeometryDrawing>
+                                                        </DrawingGroup>
+                                                    </DrawingBrush.Drawing>
+                                                </DrawingBrush>
+                                            </Border.BorderBrush>
+                                        </Border>
+                                    </StackPanel>
+                                </Border>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel></WrapPanel>
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                </ItemsControl>
             </StackPanel>
             <Border  CornerRadius="0 0 30 30" Background="#7d95ff"  Grid.Row="4">
                 <StackPanel Background="Transparent" HorizontalAlignment="Left" Orientation="Horizontal">
-                    <Border Name="btnCancel" Style="{StaticResource ButtonStyle}" CornerRadius="0 50 50 0">
+                    <Border Name="btnCancel" Style="{StaticResource ButtonStyle}" CornerRadius="0 70 70 0">
                         <StackPanel VerticalAlignment="Center">
                             <TextBlock TextAlignment="Center" FontWeight="Bold" Text="CANCEL" Foreground="#fff" FontSize="50"></TextBlock>
                         </StackPanel>
@@ -92,7 +226,7 @@
                             </DrawingBrush>
                         </Border.BorderBrush>
                     </Border>
-                    <Border Name="btnDone" Style="{StaticResource ButtonStyle}" Margin="480 0 0 0" CornerRadius="50 0 0 50">
+                    <Border Name="btnDone" Style="{StaticResource ButtonStyle}" Margin="480 0 0 0" CornerRadius="70 0 0 70">
                         <StackPanel VerticalAlignment="Center">
                             <TextBlock TextAlignment="Center" FontWeight="Bold" Text="DONE" Foreground="#fff" FontSize="50"></TextBlock>
                         </StackPanel>
