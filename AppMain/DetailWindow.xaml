@@ -13,6 +13,9 @@
         TextOptions.TextRenderingMode="Auto"
         Background="{DynamicResource MaterialDesignPaper}"
         FontFamily="{DynamicResource MaterialDesignFont}">
+    <Window.Resources>
+        <local:ImagePathConverter x:Key="imagePath"/>
+    </Window.Resources>
     <Border CornerRadius="30 30 0 0" Background="#D2DAFF">
         <Grid>
             <Grid.RowDefinitions>
@@ -50,12 +53,12 @@
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
 
-                            <Image Grid.Column="0" Source="{Binding ImgSrc}" RenderOptions.BitmapScalingMode="HighQuality" Stretch="Fill"/>
+                            <Image Grid.Column="0" Source="{Binding ImgSrc, Converter={StaticResource imagePath}}" RenderOptions.BitmapScalingMode="HighQuality" Stretch="Fill"/>
 
                             <StackPanel Grid.Column="1" Name="stack01" Margin="0 50" HorizontalAlignment="Center" VerticalAlignment="Center">
                                 <TextBox TextWrapping="Wrap" Width="{Binding ElementName=stack01, Path=ActualWidth}" FontFamily="Times New Roman"
                                          Text="{Binding Name}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
-                                         FontSize="60" FontWeight="Bold"/>
+                                         FontSize="60" FontWeight="Bold" IsHitTestVisible="False"/>
 
                                 <TextBox FontFamily="Times New Roman" FontSize="100" FontWeight="Bold"
                                          BorderBrush="Purple" BorderThickness="5" Text="{Binding Price}"
@@ -64,9 +67,10 @@
                             </StackPanel>
                         </Grid>
 
-                        <Grid Grid.Row="1" Name="stack02">
+                        <Grid Grid.Row="1">
                             <TextBox TextWrapping="Wrap" AcceptsReturn="True" FontSize="56"
-                                     VerticalScrollBarVisibility="Visible" Text="{Binding Decription}" FontFamily="Times New Roman">
+                                     VerticalScrollBarVisibility="Visible" Text="{Binding Description}"
+                                     FontFamily="Times New Roman" IsReadOnly="True">
                             </TextBox>
                         </Grid>
 
