@@ -15,3 +15,5 @@ AppMain/bin/
 AppMain/obj/
 
 AppEntity/bin/
+
+*.cache
