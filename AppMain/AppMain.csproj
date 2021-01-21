@@ -189,7 +189,11 @@
     <Compile Include="LoginWindow.xaml.cs">
       <DependentUpon>LoginWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MasterPage.xaml.cs">
+      <DependentUpon>MasterPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Model\BlockUI.cs" />
+    <Compile Include="Model\Cart.cs" />
     <Compile Include="Model\CartProduct.cs" />
     <Compile Include="ProductScreen.xaml.cs">
       <DependentUpon>ProductScreen.xaml</DependentUpon>
@@ -238,6 +242,10 @@
     <Page Include="LoginWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MasterPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ProductScreen.xaml">
       <SubType>Designer</SubType>

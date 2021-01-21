@@ -12,15 +12,19 @@ namespace AppMain
     public partial class DetailWindow : Window
     {
         public Product p;
+        public CartProduct p1;
+
         public DetailWindow()
         {
             InitializeComponent();
             p = new Product { Price = 19.15, Instock = 10 };
         }
-        public DetailWindow(Product _product)
+        public DetailWindow(Product _product, ref CartProduct cartProduct)
         {
             InitializeComponent();
             p = _product;
+            p1 = cartProduct;
+
         }
 
         private void btnPlus_Click(object sender, RoutedEventArgs e)
@@ -50,6 +54,7 @@ namespace AppMain
 
         private void btnCancel_Click(object sender, RoutedEventArgs e)
         {
+            p1.Price = 100;
             this.Close();
         }
 
