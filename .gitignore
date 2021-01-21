@@ -1,11 +1,4 @@
 
-.vs/AtelierBoxVendingMachineApp/DesignTimeBuild/.dtbcache.v2
-
-AppConnection/obj/
-
-AppEntity/obj/
-
-.vs/
 
 AppConnection/bin/
 
@@ -16,4 +9,16 @@ AppMain/bin/
 AppMain/obj/
 
 AppEntity/bin/
+
+.vs/AtelierBoxVendingMachineApp/DesignTimeBuild/.dtbcache.v2
+
+AppConnection/obj/
+
+AppEntity/obj/
+.vs/
+
+AppConnection/bin/
+
+*.user
+
 
